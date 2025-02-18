@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   stories: ["../src/stories/**/*.stories.ts"],
   addons: ["@storybook/addon-essentials"],
   core: { builder: "@storybook/builder-vite" },
+  staticDirs: ["../dist"], // Ensures metadata is available
 };
 
 export default config;
