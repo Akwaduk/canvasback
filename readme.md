@@ -111,26 +111,19 @@ export const Default = Template.bind({});
 Default.args = { value: "Hello World" };
 ```
 
-## Running the Development Server
+# Generating `custom-elements.json` for Canvasback Web Components
+
+## **📌 What is `custom-elements.json`?**
+The `custom-elements.json` file is a **metadata file** that documents Web Components, making them compatible with **Storybook, VS Code, and other tooling**.
+
+This is the command to run to generate the manifest.
+```
+npx @custom-elements-manifest/analyzer analyze --litelement --outdir dist
 ```sh
-npm run dev
+
+Once run, it will generate a file in the following folder.
+```
+dist/custom-elements.json
 ```
 
-## Building for Production
-```sh
-npm run build
-```
-
-## Running Tests
-```sh
-npm run test
-```
-
-## Running Playwright for Browser Testing
-```sh
-npm run test:e2e
-```
-
-## Conclusion
-Canvasback provides a streamlined way to build and manage UI components using Web Components and Lit. With Storybook integration and a powerful testing setup, it ensures reliable and scalable UI development.
-
+To develop you'll also want to use Visual Studio Code as well as the lit-plugin.
