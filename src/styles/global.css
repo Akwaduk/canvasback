@@ -1,26 +1,25 @@
+/* src/styles/theme.css */
 :root {
+  /* Light theme (default) */
   --canvasback-font: Arial, sans-serif;
   --canvasback-background: #f0ead6; /* Eggshell White */
   --canvasback-text: #1a1a1a; /* Almost Black */
   --canvasback-border: #1a1a1a;
-
-  /* Dark Mode */
-  --canvasback-dark-background: #1a1a1a;
-  --canvasback-dark-text: #f0ead6;
-  --canvasback-dark-border: #f0ead6;
 }
 
+/* Dark theme */
+[data-theme="dark"] {
+  --canvasback-background: #1a1a1a;
+  --canvasback-text: #f0ead6;
+  --canvasback-border: #f0ead6;
+}
+
+/* Base styles */
 html, body {
   font-family: var(--canvasback-font);
   background-color: var(--canvasback-background);
   color: var(--canvasback-text);
   margin: 0;
   padding: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  html, body {
-    background-color: var(--canvasback-dark-background);
-    color: var(--canvasback-dark-text);
-  }
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

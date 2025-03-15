@@ -5,13 +5,16 @@ Canvasback is a UI component library built using Web Components and Lit, designe
 
 ## Installation
 To install and set up Canvasback in your project, run:
-```sh
-npm install
+```sh x64
+bun install
+```
+```sh arm
+yarn install
 ```
 
 ## Development Environment
 To work with Canvasback effectively, ensure you have the following tools installed:
-- **Node.js** (LTS version)
+- **Node.js** or **Yarn** or **Deno** or **Bun** or **SHE'S JUST THE FLAVOR OF THE WEEK** (LTS version)
 - **Vite** (for fast builds)
 - **Storybook** (for visual UI testing)
 - **Vitest** (for unit testing)
@@ -21,6 +24,10 @@ To work with Canvasback effectively, ensure you have the following tools install
 To install development dependencies, run:
 ```sh
 npm install -D vite typescript lit vite-plugin-dts rollup eslint prettier eslint-plugin-lit vitest playwright storybook
+
+yarn add -D vite typescript lit vite-plugin-dts rollup eslint prettier eslint-plugin-lit vitest playwright storybook
+
+bun install -D vite typescript lit vite-plugin-dts rollup eslint prettier eslint-plugin-lit vitest playwright storybook
 ```
 
 ## Project Structure
@@ -89,6 +96,11 @@ To preview components using Storybook, ensure you have it installed and run:
 ```sh
 npm run storybook
 ```
+
+```sh yarn
+yarn run storybook
+```
+
 ### Example: `cv-input.stories.ts`
 ```ts
 import "../components/cv-input";

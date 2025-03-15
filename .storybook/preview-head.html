@@ -1,0 +1,27 @@
+<script>
+    // Initialize theme support in Storybook
+    (function() {
+      // Check for saved preference or system preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme');
+      
+      // Set initial theme
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      
+      // Add theme support to Storybook iframe
+      window.addEventListener('load', function() {
+        const iframe = document.querySelector('#storybook-preview-iframe');
+        if (iframe) {
+          iframe.onload = function() {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDocument.documentElement.setAttribute('data-theme', 
+              document.documentElement.getAttribute('data-theme') || 'light');
+          };
+        }
+      });
+    })();
+  </script>
