@@ -6,7 +6,7 @@ export class CvNav extends LitElement {
   static styles = css`
     nav {
       display: flex;
-      background-color: var(--cv-black, #1a1a1a);
+      background-color: var(--canvasback-text); /* Use text color for background */
       padding: 16px;
     }
     ul {
@@ -19,7 +19,7 @@ export class CvNav extends LitElement {
       margin-right: 24px;
     }
     a {
-      color: var(--cv-white, #f0ead6);
+      color: var(--canvasback-background); /* Use background color for text */
       text-decoration: none;
       font-weight: bold;
     }

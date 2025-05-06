@@ -1,17 +1,18 @@
 /* src/styles/theme.css */
 :root {
-  /* Light theme (default) */
-  --canvasback-font: Arial, sans-serif;
-  --canvasback-background: #f0ead6; /* Eggshell White */
-  --canvasback-text: #1a1a1a; /* Almost Black */
-  --canvasback-border: #1a1a1a;
+  /* Light theme (default) - Paperwhite style */
+  --canvasback-font: 'Georgia', serif; /* Changed to serif font */
+  --canvasback-background: #f0ead6; /* Eggshell White - Seems appropriate */
+  --canvasback-text: #1a1a1a; /* Almost Black - Seems appropriate */
+  --canvasback-border: #aaaaaa; /* Lighter gray for borders */
 }
 
 /* Dark theme */
 [data-theme="dark"] {
+  --canvasback-font: 'Georgia', serif; /* Ensure dark theme also uses serif */
   --canvasback-background: #1a1a1a;
   --canvasback-text: #f0ead6;
-  --canvasback-border: #f0ead6;
+  --canvasback-border: #555555; /* Darker gray for dark theme borders */
 }
 
 /* Base styles */

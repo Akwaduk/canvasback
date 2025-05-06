@@ -5,14 +5,21 @@ import { property, customElement } from 'lit/decorators.js';
 export class CanvasbackInput extends LitElement {
   static styles = css`
     input {
-      border: 1px solid #ccc;
+      border: 1px solid var(--canvasback-border); /* Use theme border color */
       padding: 8px;
       border-radius: 4px;
       font-size: 14px;
       width: 100%;
+      background-color: var(--canvasback-background); /* Use theme background */
+      color: var(--canvasback-text); /* Use theme text */
+      font-family: var(--canvasback-font); /* Use theme font */
     }
     :host([error]) input {
-      border-color: red;
+      border-color: red; /* Keep error state distinct */
+    }
+    label {
+        font-family: var(--canvasback-font); /* Ensure label uses theme font */
+        color: var(--canvasback-text); /* Ensure label uses theme text */
     }
   `;
 

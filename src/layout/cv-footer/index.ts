@@ -5,8 +5,8 @@ import { customElement } from "lit/decorators.js";
 export class CvFooter extends LitElement {
   static styles = css`
     footer {
-      background-color: var(--cv-black, #1a1a1a);
-      color: var(--cv-white, #f0ead6);
+      background-color: var(--canvasback-text); /* Use text color for background */
+      color: var(--canvasback-background); /* Use background color for text */
       text-align: center;
       padding: 16px;
       position: fixed;

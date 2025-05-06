@@ -5,7 +5,7 @@ const config: StorybookConfig = {
   stories: ["../src/**/*.stories.ts"],
   addons: [
     "@storybook/addon-essentials",
-    "./ThemeToggleAddon.js"
+    "./ThemeToggleAddon.ts"
   ],
   core: { builder: "@storybook/builder-vite" },
   staticDirs: ["../dist"],
