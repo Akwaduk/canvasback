@@ -1,7 +1,35 @@
 /* src/styles/theme.css */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/nunito-sans-regular.woff2') format('woff2'); /* Adjust path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/nunito-sans-italic.woff2') format('woff2'); /* Adjust path if needed */
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/nunito-sans-bold.woff2') format('woff2'); /* Adjust path if needed */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/nunito-sans-bold-italic.woff2') format('woff2'); /* Adjust path if needed */
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
   /* Light theme (default) - Paperwhite style */
-  --canvasback-font: 'Georgia', serif; /* Changed to serif font */
+  --canvasback-font: 'Nunito Sans', sans-serif; /* Changed to sans-serif font */
   --canvasback-background: #f0ead6; /* Eggshell White - Seems appropriate */
   --canvasback-text: #1a1a1a; /* Almost Black - Seems appropriate */
   --canvasback-border: #aaaaaa; /* Lighter gray for borders */
@@ -9,7 +37,7 @@
 
 /* Dark theme */
 [data-theme="dark"] {
-  --canvasback-font: 'Georgia', serif; /* Ensure dark theme also uses serif */
+  --canvasback-font: 'Nunito Sans', sans-serif; /* Ensure dark theme also uses sans-serif */
   --canvasback-background: #1a1a1a;
   --canvasback-text: #f0ead6;
   --canvasback-border: #555555; /* Darker gray for dark theme borders */
