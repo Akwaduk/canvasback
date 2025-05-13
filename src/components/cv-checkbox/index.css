@@ -1,0 +1,6 @@
+/* Styles for cv-checkbox are primarily handled within the component's shadow DOM. */
+/* This file is for consistency or if global styles affecting the checkbox are needed. */
+
+cv-checkbox {
+  /* Fallback display if needed, but :host styles in component are preferred */
+}

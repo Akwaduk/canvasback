@@ -1,0 +1,6 @@
+/* Styles for cv-modal are primarily handled within the component's shadow DOM. */
+/* This file is for consistency or if global styles affecting the modal are needed. */
+
+cv-modal {
+  /* Fallback display if needed, but :host styles in component are preferred */
+}

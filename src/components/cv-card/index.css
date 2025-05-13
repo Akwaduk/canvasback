@@ -1,0 +1,8 @@
+/* Styles for cv-card are primarily handled within the component's shadow DOM. */
+/* This file is here for consistency or if global styles affecting the card are needed. */
+
+/* Example of a global style that might affect cards if they were not using shadow DOM,
+   or for elements slotted into the card that don't have their own encapsulation. */
+cv-card {
+  /* You can add fallback styles here if needed, but prefer component-level styles. */
+}

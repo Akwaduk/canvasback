@@ -39,7 +39,7 @@
 [data-theme="dark"] {
   --canvasback-font: 'Nunito Sans', sans-serif; /* Ensure dark theme also uses sans-serif */
   --canvasback-background: #1a1a1a;
-  --canvasback-text: #f0ead6;
+  --canvasback-text: #888;
   --canvasback-border: #555555; /* Darker gray for dark theme borders */
 }
 
