@@ -107,6 +107,8 @@ export class CvDropdown extends LitElement {
     }
   `;
 
+  private static readonly ALLOWED_OPTION_ELEMENTS = ['OPTION', 'OPTGROUP'];
+
   @property({ type: String }) selectedValue = "";
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String }) label = "";
@@ -139,14 +141,13 @@ export class CvDropdown extends LitElement {
     select.innerHTML = '';
 
     // Get all slotted option and optgroup elements
-    const ALLOWED_ELEMENTS = ['OPTION', 'OPTGROUP'];
     const slottedElements = Array.from(this.children).filter(
-      (child) => ALLOWED_ELEMENTS.includes(child.tagName)
+      (child) => CvDropdown.ALLOWED_OPTION_ELEMENTS.includes(child.tagName)
     );
 
     // Clone and append each element to shadow DOM select
     slottedElements.forEach((element) => {
-      const clonedElement = element.cloneNode(true);
+      const clonedElement = element.cloneNode(true) as Element;
       select.appendChild(clonedElement);
     });
 
@@ -184,6 +185,8 @@ export class CvDropdown extends LitElement {
     this.updateComplete.then(() => {
       this._syncOptions();
       this._updateSelectedValue();
+    }).catch((error) => {
+      console.error('Error syncing dropdown options:', error);
     });
   }
 
