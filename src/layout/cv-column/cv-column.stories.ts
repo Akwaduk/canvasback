@@ -70,7 +70,7 @@ export const Default: Story = {
         offset="${args.offset}"
         align="${args.align}"
         valign="${args.valign}">
-        ${createColumnContent(`Span ${args.span}, Offset ${args.offset}`, '#4A90E2')}
+        ${createColumnContent(`Span ${args.span}, Offset ${args.offset}`, '#d3d3d3')}
       </cv-column>
     </cv-grid>
   `
@@ -80,37 +80,37 @@ export const SpanExamples: Story = {
   render: () => html`
     <cv-grid columns="12" gap="1rem">
       <cv-column span="12">
-        ${createColumnContent('span="12"', '#4A90E2')}
+        ${createColumnContent('span="12"', '#d3d3d3')}
       </cv-column>
       
       <cv-column span="6">
-        ${createColumnContent('span="6"', '#50E3C2')}
+        ${createColumnContent('span="6"', '#a9a9a9')}
       </cv-column>
       <cv-column span="6">
-        ${createColumnContent('span="6"', '#50E3C2')}
+        ${createColumnContent('span="6"', '#a9a9a9')}
       </cv-column>
       
       <cv-column span="4">
-        ${createColumnContent('span="4"', '#F5A623')}
+        ${createColumnContent('span="4"', '#888888')}
       </cv-column>
       <cv-column span="4">
-        ${createColumnContent('span="4"', '#F5A623')}
+        ${createColumnContent('span="4"', '#888888')}
       </cv-column>
       <cv-column span="4">
-        ${createColumnContent('span="4"', '#F5A623')}
+        ${createColumnContent('span="4"', '#888888')}
       </cv-column>
       
       <cv-column span="3">
-        ${createColumnContent('span="3"', '#D0021B')}
+        ${createColumnContent('span="3"', '#777777')}
       </cv-column>
       <cv-column span="3">
-        ${createColumnContent('span="3"', '#D0021B')}
+        ${createColumnContent('span="3"', '#777777')}
       </cv-column>
       <cv-column span="3">
-        ${createColumnContent('span="3"', '#D0021B')}
+        ${createColumnContent('span="3"', '#777777')}
       </cv-column>
       <cv-column span="3">
-        ${createColumnContent('span="3"', '#D0021B')}
+        ${createColumnContent('span="3"', '#777777')}
       </cv-column>
     </cv-grid>
   `
@@ -120,21 +120,21 @@ export const OffsetExamples: Story = {
   render: () => html`
     <cv-grid columns="12" gap="1rem">
       <cv-column span="6" offset="6">
-        ${createColumnContent('span="6" offset="6"', '#4A90E2')}
+        ${createColumnContent('span="6" offset="6"', '#d3d3d3')}
       </cv-column>
       
       <cv-column span="4" offset="4">
-        ${createColumnContent('span="4" offset="4"', '#50E3C2')}
+        ${createColumnContent('span="4" offset="4"', '#a9a9a9')}
       </cv-column>
       <cv-column span="4">
-        ${createColumnContent('span="4"', '#50E3C2')}
+        ${createColumnContent('span="4"', '#a9a9a9')}
       </cv-column>
       
       <cv-column span="3" offset="3">
-        ${createColumnContent('span="3" offset="3"', '#F5A623')}
+        ${createColumnContent('span="3" offset="3"', '#888888')}
       </cv-column>
       <cv-column span="3" offset="3">
-        ${createColumnContent('span="3" offset="3"', '#F5A623')}
+        ${createColumnContent('span="3" offset="3"', '#888888')}
       </cv-column>
     </cv-grid>
   `
@@ -144,30 +144,30 @@ export const NestedColumns: Story = {
   render: () => html`
     <cv-grid columns="12" gap="1rem">
       <cv-column span="6">
-        ${createColumnContent('Parent Column 1', '#4A90E2')}
+        ${createColumnContent('Parent Column 1', '#d3d3d3')}
         
         <cv-grid columns="12" gap="0.5rem" style="margin-top: 0.5rem;">
           <cv-column span="6">
-            ${createColumnContent('Nested 6', '#9013FE', '60px')}
+            ${createColumnContent('Nested 6', '#888888', '60px')}
           </cv-column>
           <cv-column span="6">
-            ${createColumnContent('Nested 6', '#9013FE', '60px')}
+            ${createColumnContent('Nested 6', '#888888', '60px')}
           </cv-column>
         </cv-grid>
       </cv-column>
       
       <cv-column span="6">
-        ${createColumnContent('Parent Column 2', '#50E3C2')}
+        ${createColumnContent('Parent Column 2', '#a9a9a9')}
         
         <cv-grid columns="12" gap="0.5rem" style="margin-top: 0.5rem;">
           <cv-column span="4">
-            ${createColumnContent('Nested 4', '#9013FE', '60px')}
+            ${createColumnContent('Nested 4', '#888888', '60px')}
           </cv-column>
           <cv-column span="4">
-            ${createColumnContent('Nested 4', '#9013FE', '60px')}
+            ${createColumnContent('Nested 4', '#888888', '60px')}
           </cv-column>
           <cv-column span="4">
-            ${createColumnContent('Nested 4', '#9013FE', '60px')}
+            ${createColumnContent('Nested 4', '#888888', '60px')}
           </cv-column>
         </cv-grid>
       </cv-column>
@@ -189,16 +189,16 @@ export const Responsive: Story = {
     
     <cv-grid columns="12" gap="1rem">
       <cv-column responsive="xs:12 sm:6 md:4 lg:3">
-        ${createColumnContent('Responsive Column', '#4A90E2')}
+        ${createColumnContent('Responsive Column', '#d3d3d3')}
       </cv-column>
       <cv-column responsive="xs:12 sm:6 md:4 lg:3">
-        ${createColumnContent('Responsive Column', '#50E3C2')}
+        ${createColumnContent('Responsive Column', '#a9a9a9')}
       </cv-column>
       <cv-column responsive="xs:12 sm:6 md:4 lg:3">
-        ${createColumnContent('Responsive Column', '#F5A623')}
+        ${createColumnContent('Responsive Column', '#888888')}
       </cv-column>
       <cv-column responsive="xs:12 sm:6 md:4 lg:3">
-        ${createColumnContent('Responsive Column', '#D0021B')}
+        ${createColumnContent('Responsive Column', '#777777')}
       </cv-column>
     </cv-grid>
   `
@@ -211,13 +211,13 @@ export const Alignment: Story = {
         <h3 style="margin-top: 0;">align="start", valign="start"</h3>
         <cv-grid columns="3" gap="1rem" style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; height: 150px;">
           <cv-column align="start" valign="start">
-            ${createColumnContent('Text\nAlign Start', '#4A90E2', '80px')}
+            ${createColumnContent('Text\nAlign Start', '#d3d3d3', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#50E3C2', '80px')}
+            ${createColumnContent('Default', '#a9a9a9', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#F5A623', '80px')}
+            ${createColumnContent('Default', '#888888', '80px')}
           </cv-column>
         </cv-grid>
       </div>
@@ -226,13 +226,13 @@ export const Alignment: Story = {
         <h3 style="margin-top: 0;">align="center", valign="center"</h3>
         <cv-grid columns="3" gap="1rem" style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; height: 150px;">
           <cv-column align="center" valign="center">
-            ${createColumnContent('Text\nAlign Center', '#4A90E2', '80px')}
+            ${createColumnContent('Text\nAlign Center', '#d3d3d3', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#50E3C2', '80px')}
+            ${createColumnContent('Default', '#a9a9a9', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#F5A623', '80px')}
+            ${createColumnContent('Default', '#888888', '80px')}
           </cv-column>
         </cv-grid>
       </div>
@@ -241,13 +241,13 @@ export const Alignment: Story = {
         <h3 style="margin-top: 0;">align="end", valign="end"</h3>
         <cv-grid columns="3" gap="1rem" style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; height: 150px;">
           <cv-column align="end" valign="end">
-            ${createColumnContent('Text\nAlign End', '#4A90E2', '80px')}
+            ${createColumnContent('Text\nAlign End', '#d3d3d3', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#50E3C2', '80px')}
+            ${createColumnContent('Default', '#a9a9a9', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#F5A623', '80px')}
+            ${createColumnContent('Default', '#888888', '80px')}
           </cv-column>
         </cv-grid>
       </div>
@@ -256,13 +256,13 @@ export const Alignment: Story = {
         <h3 style="margin-top: 0;">Mixed alignment</h3>
         <cv-grid columns="3" gap="1rem" style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; height: 150px;">
           <cv-column align="start" valign="start">
-            ${createColumnContent('Start', '#4A90E2', '80px')}
+            ${createColumnContent('Start', '#d3d3d3', '80px')}
           </cv-column>
           <cv-column align="center" valign="center">
-            ${createColumnContent('Center', '#50E3C2', '80px')}
+            ${createColumnContent('Center', '#a9a9a9', '80px')}
           </cv-column>
           <cv-column align="end" valign="end">
-            ${createColumnContent('End', '#F5A623', '80px')}
+            ${createColumnContent('End', '#888888', '80px')}
           </cv-column>
         </cv-grid>
       </div>
@@ -271,15 +271,15 @@ export const Alignment: Story = {
         <h3 style="margin-top: 0;">valign="stretch" (full height)</h3>
         <cv-grid columns="3" gap="1rem" style="background-color: #f8f8f8; padding: 1rem; border-radius: 4px; height: 150px;">
           <cv-column valign="stretch">
-            <div style="background-color: #4A90E2; display: flex; align-items: center; justify-content: center; color: white; border-radius: 4px; width: 100%; height: 100%;">
+            <div style="background-color: #d3d3d3; display: flex; align-items: center; justify-content: center; color: black; border-radius: 4px; width: 100%; height: 100%;">
               Full Height
             </div>
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#50E3C2', '80px')}
+            ${createColumnContent('Default', '#a9a9a9', '80px')}
           </cv-column>
           <cv-column>
-            ${createColumnContent('Default', '#F5A623', '80px')}
+            ${createColumnContent('Default', '#888888', '80px')}
           </cv-column>
         </cv-grid>
       </div>
@@ -296,12 +296,12 @@ export const ComplexLayout: Story = {
     <cv-grid columns="12" gap="1rem">
       <!-- Header -->
       <cv-column span="12">
-        ${createColumnContent('Header', '#4A90E2', '60px')}
+        ${createColumnContent('Header', '#d3d3d3', '60px')}
       </cv-column>
       
       <!-- Sidebar -->
       <cv-column span="3">
-        ${createColumnContent('Sidebar', '#9013FE', '200px')}
+        ${createColumnContent('Sidebar', '#888888', '200px')}
       </cv-column>
       
       <!-- Main Content -->
@@ -309,41 +309,41 @@ export const ComplexLayout: Story = {
         <cv-grid columns="12" gap="1rem">
           <!-- Content Header -->
           <cv-column span="12">
-            ${createColumnContent('Content Header', '#50E3C2', '60px')}
+            ${createColumnContent('Content Header', '#a9a9a9', '60px')}
           </cv-column>
           
           <!-- Main Cards -->
           <cv-column span="8">
-            ${createColumnContent('Main Content Area', '#F5A623', '120px')}
+            ${createColumnContent('Main Content Area', '#c0c0c0', '120px')}
           </cv-column>
           
           <cv-column span="4">
-            ${createColumnContent('Sidebar Right', '#D0021B', '120px')}
+            ${createColumnContent('Sidebar Right', '#999999', '120px')}
           </cv-column>
           
           <!-- Footer Cards -->
           <cv-column span="4">
-            ${createColumnContent('Card 1', '#4A90E2', '80px')}
+            ${createColumnContent('Card 1', '#d3d3d3', '80px')}
           </cv-column>
           
           <cv-column span="4">
-            ${createColumnContent('Card 2', '#50E3C2', '80px')}
+            ${createColumnContent('Card 2', '#a9a9a9', '80px')}
           </cv-column>
           
           <cv-column span="4">
-            ${createColumnContent('Card 3', '#F5A623', '80px')}
+            ${createColumnContent('Card 3', '#c0c0c0', '80px')}
           </cv-column>
           
           <!-- Content Footer -->
           <cv-column span="12">
-            ${createColumnContent('Content Footer', '#50E3C2', '60px')}
+            ${createColumnContent('Content Footer', '#a9a9a9', '60px')}
           </cv-column>
         </cv-grid>
       </cv-column>
       
       <!-- Footer -->
       <cv-column span="12">
-        ${createColumnContent('Footer', '#4A90E2', '60px')}
+        ${createColumnContent('Footer', '#d3d3d3', '60px')}
       </cv-column>
     </cv-grid>
   `
@@ -357,15 +357,15 @@ export const ColumnOffsetAndResponsive: Story = {
     
     <cv-grid columns="12" gap="1rem">
       <cv-column span="10" offset="1" responsive="xs:12 sm:10 md:8 lg:6">
-        ${createColumnContent('Centered, Responsive Column', '#4A90E2')}
+        ${createColumnContent('Centered, Responsive Column', '#d3d3d3')}
       </cv-column>
       
       <cv-column span="5" offset="1" responsive="xs:12 sm:10 md:5 lg:5">
-        ${createColumnContent('Column 1', '#50E3C2')}
+        ${createColumnContent('Column 1', '#a9a9a9')}
       </cv-column>
       
       <cv-column span="5" offset="0" responsive="xs:12 sm:10 md:5 lg:5">
-        ${createColumnContent('Column 2', '#F5A623')}
+        ${createColumnContent('Column 2', '#888888')}
       </cv-column>
     </cv-grid>
   `
