@@ -53,7 +53,7 @@ const createColumnContent = (content: string, color: string = '#f0f0f0', height:
 
 // Helper function to determine if a color is light (for text contrast)
 function isLightColor(color: string): boolean {
-  return ['#f0f0f0', '#ffffff', '#f5f5f5', '#eeeeee'].includes(color.toLowerCase());
+  return ['#f0f0f0', '#ffffff', '#f5f5f5', '#eeeeee', '#d3d3d3', '#a9a9a9', '#888888', '#777777', '#c0c0c0', '#999999'].includes(color.toLowerCase());
 }
 
 export const Default: Story = {
