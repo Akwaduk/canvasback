@@ -139,8 +139,9 @@ export class CvDropdown extends LitElement {
     select.innerHTML = '';
 
     // Get all slotted option and optgroup elements
+    const ALLOWED_ELEMENTS = ['OPTION', 'OPTGROUP'];
     const slottedElements = Array.from(this.children).filter(
-      (child) => child.tagName === 'OPTION' || child.tagName === 'OPTGROUP'
+      (child) => ALLOWED_ELEMENTS.includes(child.tagName)
     );
 
     // Clone and append each element to shadow DOM select
@@ -184,13 +185,6 @@ export class CvDropdown extends LitElement {
       this._syncOptions();
       this._updateSelectedValue();
     });
-  }
-
-  // Also sync options when component is updated
-  updated(changedProperties: Map<string, any>) {
-    super.updated(changedProperties);
-    // Re-sync options if children change
-    this._syncOptions();
   }
 
   render() {
