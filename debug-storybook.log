@@ -1,0 +1,43 @@
+[16:54:22.966] [INFO] storybook v10.2.1
+[16:54:23.240] [DEBUG] Getting package.json info for /home/runner/work/canvasback/canvasback/package.json...
+[16:54:23.257] [WARN] Could not resolve addon "@storybook/addon-essentials", skipping. Is it installed?
+[16:54:23.263] [ERROR] [38;2;241;97;97mSB_CORE-SERVER_0002 (CriticalPresetLoadError): Storybook failed to load the following preset: @storybook/web-components-vite/preset.
+
+Please check whether your setup is correct, the Storybook dependencies (and their peer dependencies) are installed correctly and there are no package version clashes.
+
+If you believe this is a bug, please open an issue on Github.
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@storybook/web-components-vite' imported from /home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/_node-chunks/chunk-KYZVFZ4V.js
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at nextResolve (node:internal/modules/esm/hooks:864:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:306:30)
+    at MessagePort.handleMessage (node:internal/modules/esm/worker:196:24)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:831:20)
+    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)
+
+More info: 
+[39m
+    at loadPreset (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/_node-chunks/chunk-R3KAQRS5.js:10081:13)
+    at async Promise.all (index 0)
+    at async loadPresets (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/_node-chunks/chunk-R3KAQRS5.js:10090:73)
+    at async getPresets (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/_node-chunks/chunk-R3KAQRS5.js:10121:23)
+    at async buildDevStandalone (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/core-server/index.js:7532:17)
+    at async withTelemetry (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/_node-chunks/chunk-KNMEGL7N.js:218:12)
+    at async dev (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///home/runner/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/bin/core.js:2801:92)
+[16:54:23.278] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[16:54:23.281] [WARN] Could not resolve addon "@storybook/addon-essentials", skipping. Is it installed?
+[16:54:23.288] [WARN]   Failed to load preset: {"type":"presets","name":"/home/runner/work/canvasback/canvasback/.storybook/ThemeToggleAddon.ts"} on level 1
+[16:54:23.289] [ERROR] Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@storybook/addons' imported from ./.storybook/ThemeToggleAddon.ts
+    at packageResolve (node:internal/modules/esm/resolve:873:9)
+    at moduleResolve (node:internal/modules/esm/resolve:946:18)
+    at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+    at nextResolve (node:internal/modules/esm/hooks:864:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:306:30)
+    at handleMessage (node:internal/modules/esm/worker:196:24)
+    at Immediate.checkForMessages (node:internal/modules/esm/worker:138:28)
+    at process.processImmediate (node:internal/timers:483:21)
+[16:54:23.292] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
