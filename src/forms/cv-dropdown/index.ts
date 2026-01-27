@@ -107,6 +107,8 @@ export class CvDropdown extends LitElement {
     }
   `;
 
+  private static readonly ALLOWED_OPTION_ELEMENTS = ['OPTION', 'OPTGROUP'];
+
   @property({ type: String }) selectedValue = "";
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String }) label = "";
@@ -120,13 +122,38 @@ export class CvDropdown extends LitElement {
   // Handle change event
   private _handleChange(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
-    if (selectElement.tagName === 'SELECT') {
+    if (selectElement && selectElement.tagName === 'SELECT') {
       this.selectedValue = selectElement.value;
       this.dispatchEvent(new CustomEvent("cv-dropdown-change", { 
         detail: this.selectedValue,
         bubbles: true,
         composed: true
       }));
+    }
+  }
+
+  // Sync slotted options to the shadow DOM select element
+  private _syncOptions() {
+    const select = this.renderRoot.querySelector('select');
+    if (!select) return;
+
+    // Clear existing options in shadow DOM select
+    select.innerHTML = '';
+
+    // Get all slotted option and optgroup elements
+    const slottedElements = Array.from(this.children).filter(
+      (child) => CvDropdown.ALLOWED_OPTION_ELEMENTS.includes(child.tagName)
+    );
+
+    // Clone and append each element to shadow DOM select
+    slottedElements.forEach((element) => {
+      const clonedElement = element.cloneNode(true) as Element;
+      select.appendChild(clonedElement);
+    });
+
+    // Update selected value after options are synced
+    if (this.selectedValue) {
+      select.value = this.selectedValue;
     }
   }
 
@@ -154,7 +181,13 @@ export class CvDropdown extends LitElement {
   // Make sure selectedValue is set when component is first connected
   connectedCallback() {
     super.connectedCallback();
-    this._updateSelectedValue();
+    // Sync options from light DOM to shadow DOM
+    this.updateComplete.then(() => {
+      this._syncOptions();
+      this._updateSelectedValue();
+    }).catch((error) => {
+      console.error('Error syncing dropdown options:', error);
+    });
   }
 
   render() {
@@ -166,7 +199,6 @@ export class CvDropdown extends LitElement {
           ?disabled=${this.disabled}
           .value=${this.selectedValue || ''}
           aria-label=${this.label || 'Select an option'}>
-          <slot></slot>
         </select>
         <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
